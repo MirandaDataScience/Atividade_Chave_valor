@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade - Miranda</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        .campo { margin-bottom: 10px; }
+        label { display: block; }
+    </style>
+
+</head>
+<body>
+    
+    <form id="meuFormulario">
+        <div class="campo">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+        </div>
+        
+
+        <div class="campo">
+            <label for="email">Email:</label>
+            <input type="text" id="email" required>
+        </div>
+
+        <div class="campo">
+            <label for="dt">Ano de nascimento:</label>
+            <input type="text" id="dt" required>
+        </div>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <div id="resultado" style="margin-top: 20px; font-weight: bold;"></div>
+
+    <script>
+    
+    const formulario = document.getElementById('meuFormulario');
+    
+    formulario.addEventListener("submit", function(event){
+
+        event.preventDefault();
+
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+        const dt = document.getElementById("dt").value;
+
+        localStorage.setItem("nome", nome);
+        localStorage.setItem("email", email);
+        localStorage.setItem("dt", dt);
+
+        document.getElementById("resultado").innerHTML = "Nome: " + nome + "<br>Email: " + email + "<br> Ano de nascimento: " + dt;
+    });
+
+
+	</script>
+
+</body>
+</html>
