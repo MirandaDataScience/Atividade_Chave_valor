@@ -1,4 +1,41 @@
-.body{
-background-color: #B4D3D9;
+body{
+    background-color: #FFF2D0;
 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ h1{
+    color: #E36A6A;
+}
+
+label{
+    font-size: 30px;
+    color: #E36A6A;
+    
+}
+input{
+    width: 300px; 
+    height: 20px;
+    margin-bottom: 10px;
+    background-color: #ffcaca;
+    border-radius: 10px;
+    height: 30px;
+    border: transparent;
+    padding-left: 2%;
+}
+
+
+.botao{
+    color: #E36A6A;
+    border: solid 1px #E36A6A;
+    background-color: #FFF2D0;
+    border-radius: 10px;
+    height: 30px;
+    width: 320px;
+    align-items: center;
+}
+
+.botao:hover{
+    color: #FFF2D0;
+    background-color: #E36A6A;
 }

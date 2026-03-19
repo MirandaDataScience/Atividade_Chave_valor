@@ -2,9 +2,9 @@
 <html>
     <head>
         <title>Formulario</title>
+        <link rel="stylesheet" href="style.css">
     </head>
-    <link rel="stylesheet" href="style.css">
-    <body style="background-color: #B4D3D9;">
+    <body>
         <h1>Form Cadastro</h1>
 
         <form method="post" id="meuForm">
@@ -15,10 +15,10 @@
             <label for="txtEmail">Email: </label> <br>
             <input type="text" id="txtEmail"> <br>
             
-            <label for="dt">Data de nascimento</label><br>
-            <input type="number" id="dt"> <br>
+            <label for="dt">Data de nascimento: </label><br>
+            <input type="date" id="dt"> <br>
             
-            <input type="button" value="Enviar" id="btnEnviar">
+            <input type="button" value="Enviar" id="btnEnviar" class="botao">
         </form>
 
         <div id="resultado"></div>
