@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario</title>
+    </head>
+    <link rel="stylesheet" href="style.css">
+    <body style="background-color: #B4D3D9;">
+        <h1>Form Cadastro</h1>
+
+        <form method="post" id="meuForm">
+            
+            <label for="txtNome">Nome: </label> <br>
+            <input type="text" id="txtNome"><br>
+            
+            <label for="txtEmail">Email: </label> <br>
+            <input type="text" id="txtEmail"> <br>
+            
+            <label for="dt">Data de nascimento</label><br>
+            <input type="number" id="dt"> <br>
+            
+            <input type="button" value="Enviar" id="btnEnviar">
+        </form>
+
+        <div id="resultado"></div>
+
+        <script>
+                //var nome = prompt()
+                //var idade = 18
+                //console.log("conteudo -> " + nome + " " + idade);
+
+                var pegaBtn = document.getElementById("btnEnviar");
+                var pegaNome = document.getElementById("txtNome");
+                var pegaEmail = document.getElementById("txtEmail");
+                var pegaDt = document.getElementById("dt");
+                var resultado = document.getElementById("resultado");
+
+                var total = localStorage.getItem("total") || 0;
+
+                
+                pegaBtn.addEventListener("click", ()=>{
+                    var nome = pegaNome.value 
+                    var email = pegaEmail.value 
+                    var dt = pegaDt.value 
+
+                    // avança o contador
+                    total++;
+
+
+                    console.log("funcionou " + nome)
+                    console.log("funcionou " + email)
+                    console.log("funcionou " + dt)
+                    
+                    localStorage.setItem("nome" + total, pegaNome.value);
+                    localStorage.setItem("email" + total, email);
+                    localStorage.setItem("dt" + total, dt);
+                    localStorage.setItem("total", total);
+
+                    resultado.innerHTML += `<p>${total}. <strong>${nome}</strong> - ${email} - ${dt}</p>`;
+
+                });
+                
+
+            </script>
+    </body>
+</html>
