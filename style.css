@@ -1,7 +1,6 @@
 body{
     background-color: #FFF2D0;
-
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
  h1{
@@ -13,7 +12,7 @@ label{
     color: #E36A6A;
     
 }
-input{
+.caixas{
     width: 300px; 
     height: 20px;
     margin-bottom: 10px;
@@ -22,6 +21,11 @@ input{
     height: 30px;
     border: transparent;
     padding-left: 2%;
+}
+
+.caixas:hover{
+    border: solid 2px #ffcaca;
+    background-color: #FFF2D0;
 }
 
 
@@ -38,4 +42,9 @@ input{
 .botao:hover{
     color: #FFF2D0;
     background-color: #E36A6A;
+}
+
+#resultado{
+    font-family: arial;
+    color: #E36A6A;
 }

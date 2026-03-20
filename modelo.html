@@ -10,13 +10,13 @@
         <form method="post" id="meuForm">
             
             <label for="txtNome">Nome: </label> <br>
-            <input type="text" id="txtNome"><br>
+            <input class="caixas" type="text" id="txtNome"><br>
             
             <label for="txtEmail">Email: </label> <br>
-            <input type="text" id="txtEmail"> <br>
+            <input class="caixas" type="text" id="txtEmail"> <br>
             
             <label for="dt">Data de nascimento: </label><br>
-            <input type="date" id="dt"> <br>
+            <input class="caixas" type="date" id="dt"> <br>
             
             <input type="button" value="Enviar" id="btnEnviar" class="botao">
         </form>
@@ -55,7 +55,7 @@
                     localStorage.setItem("dt" + total, dt);
                     localStorage.setItem("total", total);
 
-                    resultado.innerHTML += `<p>${total}. <strong>${nome}</strong> - ${email} - ${dt}</p>`;
+                    resultado.innerHTML += `<p> ${total} - Nome: ${nome} <br> - Email: ${email} <br>- Data Nascimento: ${dt}</p>`;
 
                 });
                 
